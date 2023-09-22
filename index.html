@@ -17,25 +17,30 @@
             </h3>
             <hr>
         </nav>
-        <div class="toDoList">
+        <div class="sectionDiv">
             <h4>To Do List: </h4>
             <hr>
-            <ul>
+            <ul class="toDoItems">
 
             </ul>
         </div>
-        <div class="addItems">
+        <div class="sectionDiv">
             <h4> Add an Item: </h4>
-            <hr>
-
+            <form action="post">
+                <input type="text" name="toDoInput" id="toDoInput" placeholder="Input new To-Do Item here:">
+                <button type="submit" id="addButton"> + </button>
+            </form>
         </div>
-        <div class="completedItems">
+        <div class="sectionDiv">
             <h4> Completed Items: </h4>
             <hr>
-            <ul>
+            <ul class="doneItems">
 
             </ul>
         </div>
+    
     </div>
+
+    <script src="./main.js"></script>
 </body>
 </html>

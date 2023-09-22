@@ -5,7 +5,7 @@
     --font-color-main:  rgb(25, 53, 44);
     --background-color-main: aquamarine;    
     --secondary-color:  rgba(44, 219, 164, 0.9);
-    --background-image: linear-gradient(162deg, rgba(138,180,230,0.5) 0%, rgba(0,255,94,0.5) 100%);
+    --background-image: linear-gradient(162deg, rgba(138,180,230,0.75) 0%, rgba(0,255,94,0.75) 100%);
 }
 
 
@@ -19,7 +19,6 @@ html {
     margin: 0%;
     padding: 0%;
     background: var(--background-image) no-repeat fixed center;
-    position: fixed;
     height: 100%;
     width: 100%;
 }
@@ -29,7 +28,8 @@ html {
 .title, .subTitle {
     font-family: Arial, Helvetica, sans-serif;
     color: var(--font-color-main);
-    margin: 10px;
+    margin: 0px 10px 10px 10px;
+    padding: 20px 1px 1px 10px;
 }
 
 .title {
@@ -42,7 +42,7 @@ html {
 }
 
 hr {
-    margin: 50px 200px 50px 200px;
+    margin: 30px 20% 30px 20%;
     height: 10px;
     border-radius: 10px;
     background-color: var(--secondary-color);
@@ -58,16 +58,16 @@ hr {
 /* To do list styles */
 h4 {
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
     color: var(--font-color-main);
     margin: 20px;
 }
 
-.toDoList, .addItems, .completedItems {
+.sectionDiv {
     /* background-color: var(--secondary-color); */
-    margin: 50px 5% 50px 5%;
+    margin: 50px 5% 0px 5%;
     padding: 10px;
     border-radius: 10px;
-
     /* From https://css.glass */
     background: rgba(111, 222, 169, 0.36);
     border-radius: 16px;
@@ -77,3 +77,62 @@ h4 {
     border: 1px solid rgba(111, 222, 169, 0.44);
 }
 
+.sectionDiv hr {
+    margin: 0px 200px 20px 200px;
+    background: var(--background-image);
+}
+
+ul {
+    margin: 0px 0px 10px 5%;
+}
+
+.doneItems li button{
+    text-decoration: line-through;
+    pointer-events: none;
+}
+
+li {
+    list-style-type: armenian;
+    font-size: 1.4em;
+    margin:5px 5% 5px 1%;
+    color: var(--font-color-main);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ul li button {
+    font-size: 1.4em;
+    margin: 5px 5% 5px 1%;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--font-color-main);
+}
+
+form {
+    padding: 1em;
+}
+
+#toDoInput {
+    border-radius: 10px;
+    border: none;
+    background: var(--secondary-color);
+    margin: 10px 1% 10px 3%;
+    width: 30%;
+    padding: 5px 1% 5px 1%;
+    
+    font-size: 2rem;
+}
+
+#addButton {
+    font-size: 1.4em;
+    margin: 0px 0px 10px 0px;
+    padding: 0.7em 0.8em 0.4em 0.8em;
+    background: var(--background-image);
+    border: 1px solid rgba(111, 222, 169, 0.44);
+    border-radius: 10px;
+}
+
+#addButton:hover {
+    border: 2px solid rgba(33, 77, 55, 0.44);
+}
